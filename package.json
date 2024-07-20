@@ -1,0 +1,24 @@
+{
+  "name": "cda-downloader-extension-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "https": "^1.0.0",
+    "progress": "^2.0.3",
+    "puppeteer": "^22.13.1",
+    "url": "^0.11.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@types/progress": "^2.0.7",
+    "typescript": "^5.5.3"
+  }
+}

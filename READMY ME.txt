@@ -1,0 +1,26 @@
+	Powinno ci to zając 30 sekund.
+
+-------------------------------------------------------------------
+	1. Aby skorzystać musisz pobrać Node. (jebać pythona)
+		link: https://nodejs.org/en
+
+	2. Otwórz Aplication i w konsoli wprowadź:
+		- npm i
+	Na konsoli powini się wyswietlać rozne rzeczy jak to się skoń czy już możesz kraść filmy.
+
+	3. Komenda na kradzież filmów:
+		- node index.js linkUrlFilmu
+	np: node index.js https://www.cda.pl/video/2038291711
+	
+	4. Pobrany film powinien znajdowac się w folderze movie w CDA-Downloader.
+
+
+-------------------------------------------------------------------
+	Uwagi:
+	  - filmy są pobierane automatycznie z jakością 1080p
+	  - jesli film nie ma jakości 1080p nie pobieraj go aplikacją
+	  - jesli wolno ci pobiera sprawdz połąnczenie z internetem
+	  - pamietaj że pobieranie od serwerów cda nie jest najszybsze
+
+
+Created by PanDamax
