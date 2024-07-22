@@ -9,6 +9,8 @@ if (!url) {
     process.exit(1);
 }
 
+const delay = (time: number) => new Promise(resolve => setTimeout(resolve, time));
+
 (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -21,6 +23,13 @@ if (!url) {
 
     await page.waitForSelector('.fc-button.fc-cta-consent.fc-primary-button');
     await page.click('.fc-button.fc-cta-consent.fc-primary-button');
+
+    const isBtnMyPresent = await page.$('.btn.btn-my');
+    if (isBtnMyPresent) {
+        await page.click('.btn.btn-my');
+        console.log('Przycisk POTWIERDZ WIEK znaleziony. Poczekaj chwile...');
+        await delay(5000);
+    }
 
     videoTitle = await page.evaluate(() => {
         const titleElement = document.querySelector('.title-name h1');

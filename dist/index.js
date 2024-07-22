@@ -20,6 +20,7 @@ if (!url) {
     console.error('Podaj URL strony jako argument.');
     process.exit(1);
 }
+const delay = (time) => new Promise(resolve => setTimeout(resolve, time));
 (() => __awaiter(void 0, void 0, void 0, function* () {
     const browser = yield puppeteer_1.default.launch();
     const page = yield browser.newPage();
@@ -28,6 +29,12 @@ if (!url) {
     yield page.goto(url);
     yield page.waitForSelector('.fc-button.fc-cta-consent.fc-primary-button');
     yield page.click('.fc-button.fc-cta-consent.fc-primary-button');
+    const isBtnMyPresent = yield page.$('.btn.btn-my');
+    if (isBtnMyPresent) {
+        yield page.click('.btn.btn-my');
+        console.log('Przycisk POTWIERDZ WIEK znaleziony. Poczekaj chwile...');
+        yield delay(5000);
+    }
     videoTitle = yield page.evaluate(() => {
         const titleElement = document.querySelector('.title-name h1');
         const title = titleElement ? titleElement.innerText : 'Nie znaleziono tytułu';
