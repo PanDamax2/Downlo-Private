@@ -1,12 +1,15 @@
 	Powinno ci to zając 30 sekund.
 
 -------------------------------------------------------------------
-	1. Aby skorzystać musisz pobrać Node. (jebać pythona)
+	1. Aby skorzystać musisz pobrać Node.
 		link: https://nodejs.org/en
 
-	2. Otwórz Aplication i w konsoli wprowadź:
+	2. Znajdx folder dist i przenieśc na pulpiut, pozostałe pliki możesz usunąć, są on potrzebny 
+	   tylko do programowanie.
+	
+	3. Otwórz Aplication i w konsoli wprowadź:
 		- npm i
-	Na konsoli powini się wyswietlać rozne rzeczy jak to się skoń czy już możesz kraść filmy.
+	Na konsoli powini się wyswietlać rożne rzeczy, jak to się skończy już możesz kraść filmy.
 
 	3. Komenda na kradzież filmów:
 		- node index.js linkUrlFilmu
